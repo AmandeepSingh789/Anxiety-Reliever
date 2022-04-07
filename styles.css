@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #8D818C;
+    font-family: 'Caveat Brush', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    overflow: hidden;
+    display: flex;
+}
+h1{
+    color: #E9EBF8;
+    font-size:80px;
+    position:absolute; 
+    align-items: center;
+    top:0px;
+    
+}
+h2{
+    color: #E9EBF8;
+    font-size:40px;
+    position: absolute;
+    align-items: center;
+    margin-bottom:60px;
+    top: 150px;
+    
+}
+
+h4{
+    color: #E9EBF8;
+    font-size:40px;
+    align-items: center;
+}
+.step{
+    color: #E9EBF8;
+    font-size:40px;
+    align-items: center;
+    text-align: center;
+    top: 280px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.container{
+    text-align: center;
+    
+}
+
+.progress-container{
+    display: flex;
+    justify-content: space-between;
+    position:relative;
+    margin-bottom: 30px;
+    max-width:100%;
+    width:350px;
+
+}
+.progress-container::before{
+    content:'';
+    background-color: #e0e0e0;
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+    height:4px;
+    width:100%;
+    z-index:-1;
+
+}
+
+.progress{
+    background-color: #4A2545;
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+    height:4px;
+    width:0%;
+    z-index:-1;
+    transition: 1s ease;
+}
+
+.circle{
+    background-color: white;
+    color: #999;
+    border-radius: 100%;
+    height:30px;
+    width:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:3px solid #e0e0e0;
+    transition: 0.5s ease; 
+}
+
+.circle.active{
+    border-color:#4A2545;
+}
+
+.btn{
+    background-color:#B4B8C5 ;
+    border-color:#3498db;
+    color: #E9EBF8;
+    border:0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 30px;
+    padding:10px 10px;
+    margin:20px;
+}
+
+.btn:active{
+    transform: scale(0.95);
+}
+
+.btn:disabled{
+    cursor: not-allowed;
+    background-color: #b4b8c568;
+}
